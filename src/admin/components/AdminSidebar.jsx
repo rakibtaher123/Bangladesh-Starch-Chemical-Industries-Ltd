@@ -1,5 +1,6 @@
-﻿import { BarChart3, Building2, Files, Layers3, Settings, UserRound } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
+import { BarChart3, Building2, Files, Layers3, LogOut, Settings, UserRound } from 'lucide-react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 const navItems = [
   { label: 'Overview', to: '/admin/dashboard', icon: BarChart3 },
@@ -10,6 +11,14 @@ const navItems = [
 ]
 
 export default function AdminSidebar() {
+  const { logout } = useAuth()
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    await logout()
+    navigate('/')
+  }
+
   return (
     <aside className="admin-sidebar">
       <div className="admin-sidebar__brand">
@@ -28,6 +37,13 @@ export default function AdminSidebar() {
           </NavLink>
         ))}
       </nav>
+
+      <div className="admin-sidebar__footer">
+        <button className="admin-sidebar__logout" onClick={handleLogout}>
+          <LogOut size={18} />
+          Logout
+        </button>
+      </div>
     </aside>
   )
 }
