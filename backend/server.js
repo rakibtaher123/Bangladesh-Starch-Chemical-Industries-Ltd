@@ -1,4 +1,4 @@
-﻿import dotenv from 'dotenv'
+import dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import express from 'express'
@@ -85,4 +85,3 @@ const startServer = async () => {
 }
 
 startServer()
-
