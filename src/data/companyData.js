@@ -31,10 +31,10 @@
   },
   {
     id: 'sulfuric-acid',
-    name: 'Sulfuric Acid (Hâ‚‚SOâ‚„)',
+    name: 'Sulfuric Acid (H2SO4)',
     shortDesc: 'Industrial Sulfuric Acid handled and supplied with rigorous safety standards.',
     description:
-      'We supply Sulfuric Acid (Hâ‚‚SOâ‚„) for industrial buyers. All handling and storage follows applicable safety standards. Specific grades, concentration details, and safety data sheets are available upon inquiry. Please contact our team for procurement discussions.',
+      'We supply Sulfuric Acid (H2SO4) for industrial buyers. All handling and storage follows applicable safety standards. Specific grades, concentration details, and safety data sheets are available upon inquiry. Please contact our team for procurement discussions.',
     image: '/product_sulfuric_acid.png',
     alt: 'Industrial sulfuric acid in sealed laboratory glass bottle',
     category: 'Industrial Acid',
