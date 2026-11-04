@@ -84,4 +84,4 @@ const startServer = async () => {
   }
 }
 
-startServer()
+startServer()npm error Missing script: "start"
