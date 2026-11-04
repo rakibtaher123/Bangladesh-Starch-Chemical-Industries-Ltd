@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, ShieldCheck } from 'lucide-react'
 import './Navbar.css'
 
 const navLinks = [
@@ -32,7 +32,6 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} role="banner">
       <div className="navbar__container container">
-        {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={closeMenu} aria-label="Bangladesh Starch & Chemical Industries — Home">
           <img
             src="/companylogo.png"
@@ -45,7 +44,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="navbar__nav" aria-label="Main navigation">
           {navLinks.map(link => (
             <NavLink
@@ -59,8 +57,11 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
         <div className="navbar__actions">
+          <Link to="/admin/login" className="navbar__admin-link" id="navbar-admin-login-btn">
+            <ShieldCheck size={16} />
+            Director Login
+          </Link>
           <Link to="/contact" className="navbar__cta btn btn-gold" id="navbar-contact-btn">
             <Phone size={16} />
             Contact Us
@@ -77,7 +78,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`navbar__mobile ${menuOpen ? 'navbar__mobile--open' : ''}`} aria-hidden={!menuOpen}>
         <nav aria-label="Mobile navigation">
           {navLinks.map(link => (
@@ -91,6 +91,10 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
+          <Link to="/admin/login" className="navbar__mobile-admin" onClick={closeMenu} id="mobile-admin-login-btn">
+            <ShieldCheck size={18} />
+            Director Login
+          </Link>
           <Link to="/contact" className="navbar__mobile-cta btn btn-gold btn-lg" onClick={closeMenu} id="mobile-contact-btn">
             <Phone size={18} />
             Contact Us
@@ -98,7 +102,6 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {/* Overlay */}
       {menuOpen && (
         <div className="navbar__overlay" onClick={closeMenu} aria-hidden="true" />
       )}

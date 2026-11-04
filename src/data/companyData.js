@@ -54,6 +54,7 @@ export const directors = [
     name: 'Abul Kashem Mohammad Golam Rahaman',
     title: 'Director',
     isMD: false,
+    image: '/golamrahman.png',
   },
   {
     id: 'd2',
@@ -81,6 +82,7 @@ export const directors = [
     name: 'Latifa Sharmeen',
     title: 'Director',
     isMD: false,
+    image: '/sharmeen.png',
   },
 ]
 
@@ -91,7 +93,8 @@ export const companyInfo = {
   registeredOffice: '5/9, Block-E, Lalmatia Housing Estate, Dhaka-7',
   factoryAddress: 'Chuna Factory, 329/330 DIT Industrial Area, IRI Road, Tongi Bazar, Gazipur, Dhaka, Bangladesh',
   phones: ['+8801818235229', '+8801682279810'],
-  email: 'bdstarchcheind30@gmail.com',
+  email: 'bdstarchchemical1974@gmail.com',
   mapsQuery: 'Chuna+Factory+329+330+DIT+Industrial+Area+IRI+Road+Tongi+Bazar+Gazipur+Dhaka+Bangladesh',
 }
+
 
