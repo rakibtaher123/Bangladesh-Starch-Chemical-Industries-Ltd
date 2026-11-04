@@ -42,13 +42,13 @@ app.use(cors({
       callback(null, true)
       return
     }
-
     callback(new Error('CORS blocked for origin: ' + origin))
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }))
+
 app.use(express.json({ limit: '1mb' }))
 app.use(cookieParser())
 
@@ -84,4 +84,4 @@ const startServer = async () => {
   }
 }
 
-startServer()npm error Missing script: "start"
+startServer()
